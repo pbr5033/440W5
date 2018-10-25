@@ -35,7 +35,7 @@ class PolyEncrypt(object):
 #studentinputs
 #============================================================
 #Student Section
-tudent_name = raw_input("What is your first name")
+student_name = raw_input("What is your first name")
 
 #Email Section
 @cherrypy.expose
@@ -67,7 +67,7 @@ tudent_name = raw_input("What is your first name")
 
 
 
-email = raw_input("What is your Penn State Email")
+psu_email = raw_input("What is your Penn State Email")
 class Polynet(object):
     global checkmail
 
@@ -90,7 +90,14 @@ class Polynet(object):
 date = raw_input("What is the date(example 01/10/98) today?")
 
 
-#Studentvariables stored
-inputstudent_name = student_name;
-inputpsu_email = psu_email;
-inputdate = date;
+#Studentvariables: convert the stored input to strings
+inputstudent_name = str(student_name)
+inputpsu_email = str(psu_email)
+inputdate = str(date)
+
+# concatenate into one string
+inputdata = inputstudent_name + inputpsu_email + inputdate
+
+# convert to MD5
+convData = hashlib.md5()
+convData.update(inputdata)
