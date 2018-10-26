@@ -89,7 +89,6 @@ class Polynet(object):
 
 date = raw_input("What is the date(example 01/10/98) today?")
 
-
 #Studentvariables: convert the stored input to strings
 inputstudent_name = str(student_name)
 inputpsu_email = str(psu_email)
@@ -98,6 +97,9 @@ inputdate = str(date)
 # concatenate into one string
 inputdata = inputstudent_name + inputpsu_email + inputdate
 
-# convert to MD5
-convData = hashlib.md5()
-convData.update(inputdata)
+# md5 hashing
+convData = hashlib.md5(inputdata.encode('utf-8')).hexdigest()
+
+# split the hash into chunks
+chunk_size = 2
+chunked = [convData[i:i+chunk_size] for i in range(0, len(convData), chunk_size)]
