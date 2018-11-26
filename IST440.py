@@ -100,6 +100,50 @@ inputdata = inputstudent_name + inputpsu_email + inputdate
 # md5 hashing
 convData = hashlib.md5(inputdata.encode('utf-8')).hexdigest()
 
+
+
 # split the hash into chunks
 chunk_size = 2
-chunked = [convData[i:i+chunk_size] for i in range(0, len(convData), chunk_size)]
+chunked = [convData[i:i+chunk_size] for i in range(0, len(convData), chunk_size)
+
+from random import *
+#==============================================================================================================================
+people = ('Ethan','Neil','Beau','Kate','Victoria','John','Jesper','Lulu','Alex','Timberlake','Jackson','Sarah','Nion','Nitendo','Juan','Lora','Phyliss','Chrissy','Joe','Karlotta','Leticia','Pauline','Audrea','Vick','Andy','Wen','Ryan','Cathy','Ariel','William','Oscar','Jacky','Marilee','David','Bradley','Alsan','Heather','May','Ryu','Kawasaki','Jeffrey','Carl','Ferra','Jenny','Karol','Meson','Angela','Cortney','Johana','Mendy','Amelia','Kara','Chris','Anderson','Gerald','Linda','Phil','Mophy','Angel','Ronnie','Bernard','George','Rose','Cora','Kendal','Wendy','Qiana','Ford','Jack','Fred','Federrick','Lily','Laureen','Mozella','Jennie','Nataza','Amy','John','Young','Zion','Johnson','Jeff','Apple','Smith','Francis','Anthony','Melva','Bibi','Bernard','Kevin','Louis','Tina','Vincent','William','Baria','Rex','Drammond','Park','Irene','Katheryn','Carlos','Elodia','Shawn','George','Becky','Daniel','Ryan','Betty','Ben','Patricia','Allison','Phill','Gini','Erik','Elaine','Vince','Ali','Lou','Paulle','Lawerence','Karon','Loma','Ian','Mars','Kimbery','Maribel','Pamela','Sean','Shaquita','Eve','Hui','Syra','Peter','Puttin','Joy','Blit','Patsy','Dennis','Hura','Regena','Jean','George','Venerando','Linda','Louise','Ralph','Ian','Patrick','Vincent','Paul','Johnson','Morphy','Alisha','Ronald','Peggy','Dean','Henry','Catherine','Teran','Nickon','Ketty','Kasha','Mikaela','Nereida','Ara','Sebastian','Aglae','Carolyn','Hunter','Katharina','Oson','Xi','Josh','John','Jason','Joan','Yamaha','Vicktor','Amy','Daniel','Su','Po','Lisa','Mundo','Jax','Jennis','Dina','Ahri','Ivy','Bari','Kimberley','Janis','Lia','Janessa','Kenny','Kathrine','Lee','Qi','Una','Will','Kevin','Carol','Jacky','Dennis','Alishay','Risa','Kahn','Kevin','Kara','Jacelyn','Oscar','Cathy','Karrol','Nelson','Cathy','James','Wilson','Steph','Benson','Pauline','Allesia','Cici','Ferris','Jess','Dannette','Carolyne','Lula','Alton','Melo','Tyrese','Katarina','Gracia','Maya','Embid','Linda','Wen','Joe','Olivia','Tim','Olive','Kelly','Carolyn','Junior','Fenn','Mathew','Max','Kim','York','Robert','Selina','Andra','Leif','Margarete','Tina','Mill')
+
+idnumbers = (1,2,3,4,5,6)
+
+fields = ('Employee Number','Employee First Name', 'Employee Last Name','Work Email','Job Code','Home Address','Zip Code','State','Office Extension Number', 'Job Type','Office  Address', 'Personal Number', 'Email','Age','Gender','Citizenship','Number of Children', 'Social Security Number')
+
+
+
+
+peopleselector = randint (1,256)
+
+fieldselector = randint (1,20)
+
+
+
+print ("What is " + people[peopleselector-1] + "\'s " + fields[fieldselector-1] +" ?")
+
+#1.	What is the employee number for employee George Feltman?
+print("What is the employee number for" + people[peopleselector-1] "?")
+
+#2.	What is the job code for employee Jean Mayers?
+print("What is the job code for employee"+ people[peopleselector-1]"?")
+
+#3.	What is the citizenship status for employee Lee Chen?
+print("What is the citizenship status for employee" +people[peopleselector-1] "?")
+
+#4 What is the work email for employee John Kenna?
+print("What is the work email for employee" + +people[peopleselector-1] "?")
+
+#5 What is the home address for employee Bradley Lawson?
+print("What is the homeaddress" + +people[peopleselector-1] "?")
+
+#6 What is the order status and customer number for Texas Instruments?
+print("What is the order status" insert order status "and customer number for" + insert vendor selector here "?")
+
+#7 What is the order entry date and customer number for Arqule?
+print ("What is the oder entry date" entry date "and customer number for Arqule" + insert)
+
+###############################
