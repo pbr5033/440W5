@@ -107,14 +107,29 @@ chunk_size = 2
 chunked = [convData[i:i+chunk_size] for i in range(0, len(convData), chunk_size)
 
 from random import *
+import csv
 #==============================================================================================================================
-people = ('Ethan','Neil','Beau','Kate','Victoria','John','Jesper','Lulu','Alex','Timberlake','Jackson','Sarah','Nion','Nitendo','Juan','Lora','Phyliss','Chrissy','Joe','Karlotta','Leticia','Pauline','Audrea','Vick','Andy','Wen','Ryan','Cathy','Ariel','William','Oscar','Jacky','Marilee','David','Bradley','Alsan','Heather','May','Ryu','Kawasaki','Jeffrey','Carl','Ferra','Jenny','Karol','Meson','Angela','Cortney','Johana','Mendy','Amelia','Kara','Chris','Anderson','Gerald','Linda','Phil','Mophy','Angel','Ronnie','Bernard','George','Rose','Cora','Kendal','Wendy','Qiana','Ford','Jack','Fred','Federrick','Lily','Laureen','Mozella','Jennie','Nataza','Amy','John','Young','Zion','Johnson','Jeff','Apple','Smith','Francis','Anthony','Melva','Bibi','Bernard','Kevin','Louis','Tina','Vincent','William','Baria','Rex','Drammond','Park','Irene','Katheryn','Carlos','Elodia','Shawn','George','Becky','Daniel','Ryan','Betty','Ben','Patricia','Allison','Phill','Gini','Erik','Elaine','Vince','Ali','Lou','Paulle','Lawerence','Karon','Loma','Ian','Mars','Kimbery','Maribel','Pamela','Sean','Shaquita','Eve','Hui','Syra','Peter','Puttin','Joy','Blit','Patsy','Dennis','Hura','Regena','Jean','George','Venerando','Linda','Louise','Ralph','Ian','Patrick','Vincent','Paul','Johnson','Morphy','Alisha','Ronald','Peggy','Dean','Henry','Catherine','Teran','Nickon','Ketty','Kasha','Mikaela','Nereida','Ara','Sebastian','Aglae','Carolyn','Hunter','Katharina','Oson','Xi','Josh','John','Jason','Joan','Yamaha','Vicktor','Amy','Daniel','Su','Po','Lisa','Mundo','Jax','Jennis','Dina','Ahri','Ivy','Bari','Kimberley','Janis','Lia','Janessa','Kenny','Kathrine','Lee','Qi','Una','Will','Kevin','Carol','Jacky','Dennis','Alishay','Risa','Kahn','Kevin','Kara','Jacelyn','Oscar','Cathy','Karrol','Nelson','Cathy','James','Wilson','Steph','Benson','Pauline','Allesia','Cici','Ferris','Jess','Dannette','Carolyne','Lula','Alton','Melo','Tyrese','Katarina','Gracia','Maya','Embid','Linda','Wen','Joe','Olivia','Tim','Olive','Kelly','Carolyn','Junior','Fenn','Mathew','Max','Kim','York','Robert','Selina','Andra','Leif','Margarete','Tina','Mill')
 
-idnumbers = (1,2,3,4,5,6)
+empl_number = list()
+empl_first_name = list()
+empl_middle_name = list()
+empl_last_name = list()
+job_code = list()
 
-fields = ('Employee Number','Employee First Name', 'Employee Last Name','Work Email','Job Code','Home Address','Zip Code','State','Office Extension Number', 'Job Type','Office  Address', 'Personal Number', 'Email','Age','Gender','Citizenship','Number of Children', 'Social Security Number')
-
-
+with open('Employee.csv', 'r') as csvfile:
+    xReader = csv.reader(csvfile, delimiter=',')
+    for row in xReader:
+        empl_number.append(row[0])
+        empl_first_name.append(row[1])
+        empl_middle_name.append(row[2])
+        empl_last_name.append(row[3])
+        job_code.append(row[4])
+    del empl_number[0]
+    del empl_first_name[0]
+    del empl_middle_name[0]
+    del empl_last_name[0]
+    del job_code[0]
+	   
 
 
 peopleselector = randint (1,256)
